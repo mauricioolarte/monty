@@ -116,7 +116,7 @@ stack_t *delete_dnodeint_at_index(stack_t **head, unsigned int index, int line_n
 	nodeidx = get_dnodeint_at_index(*head, index);
 	if (nodeidx == NULL || *head == NULL)
 	{
-		fprintf(stderr, "L%i: can't pop an empty stack", line_number);
+		fprintf(stderr, "L%i: can't pop an empty stack\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 	if (*head == nodeidx)
