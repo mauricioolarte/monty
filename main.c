@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
 					head = push_to_stack(&head, atoi(argument[1]));
 				else
 				{
-					fprintf(stderr, "L<%i>: usage: push integer\n", line_number);
+					fprintf(stderr, "L%i: usage: push integer\n", line_number);
 					exit(EXIT_FAILURE);
 				}
 			}
@@ -52,6 +52,8 @@ int main(int argc, char *argv[])
 		}
 		else if (strcmp(argument[0], "pall") == 0)
 			print_stack(head);
+		else
+			fprintf(stderr, "L%i: unknown instruction %s\n", line_number, argument[0]);
 	}
 	fclose(file_bytecode);
 	return (0);

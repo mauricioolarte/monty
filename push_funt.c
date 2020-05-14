@@ -4,7 +4,7 @@
 #include "monty.h"
 
 /**
- *print_dlistint - print all the nodes of h.
+ *print_stack - print all the nodes of h.
  *@h: is a double linked list head.
  *Return: number of nodes.
  */
@@ -24,7 +24,7 @@ size_t print_stack(const stack_t *h)
 
 
 /**
- **add_dnodeint - check the code for Holberton School students.
+ **push_to_stack - check the code for Holberton School students.
  *@head: is head of linked list.
  *@n: integer
  * Return: new if succes NULL if fail.
@@ -35,7 +35,10 @@ stack_t *push_to_stack(stack_t **head, const int n)
 
 	new = malloc(sizeof(stack_t));
 	if (new == NULL)
-		return (NULL);
+	{
+		fprintf(stderr, "Error: malloc failed");
+		exit(EXIT_FAILURE);
+	}
 	new->n = n;
 	new->next = (*head);
 	new->prev = NULL;
