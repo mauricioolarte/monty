@@ -66,3 +66,20 @@ stack_t *push_to_stack(stack_t **head, const int n)
 	(*head) = new;
 	return (new);
 }
+
+/**
+ *free_stack - free memory of linked list.
+ *@head: is head of linked list.
+ */
+
+void free_stack(stack_t *head)
+{
+	stack_t *temp;
+
+	while (head != NULL)
+	{
+		temp = head->next;
+		free(head);
+		head = temp;
+	}
+}

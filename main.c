@@ -59,6 +59,7 @@ int main(int argc, char *argv[])
 		else
 			fprintf(stderr, "L%i: unknown instruction %s\n", line_number, argument[0]);
 	}
+	free_stack(head);
 	fclose(file_bytecode);
 	return (0);
 }
