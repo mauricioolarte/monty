@@ -56,6 +56,8 @@ int main(int argc, char *argv[])
 			print_pint(head, line_number);
 		else if	(strcmp(argument[0], "nop") == 0)
 			;
+		else if (strcmp(argument[0], "pop") == 0)
+			head = delete_dnodeint_at_index(&head,0);
 		else
 			fprintf(stderr, "L%i: unknown instruction %s\n", line_number, argument[0]);
 	}
