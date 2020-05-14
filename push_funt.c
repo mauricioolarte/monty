@@ -24,6 +24,22 @@ size_t print_stack(const stack_t *h)
 	return (number_nodes);
 }
 
+/**
+ *print_pint - print all the nodes of h.
+ *@h: is a double linked list head.
+ *Return: number of nodes.
+ */
+size_t print_pint(const stack_t *h, int line_number)
+{
+
+	if (h == NULL)
+	{
+		fprintf(stderr, "L%i: can't pint, stack empty", line_number);
+		exit(EXIT_FAILURE);
+	}
+		printf("%d\n", h->n);
+	return (line_number);
+}
 
 
 /**

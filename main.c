@@ -52,6 +52,8 @@ int main(int argc, char *argv[])
 		}
 		else if (strcmp(argument[0], "pall") == 0)
 			print_stack(head);
+		else if (strcmp(argument[0], "pint") == 0)
+			print_pint(head, line_number);
 		else if	(strcmp(argument[0], "nop") == 0)
 			;
 		else

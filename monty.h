@@ -36,5 +36,6 @@ typedef struct instruction_s
 stack_t *push_to_stack(stack_t **head, const int n);
 size_t print_stack(const stack_t *h);
 int is_integer(char *str);
+size_t print_pint(const stack_t *h, int line_number);
 
 #endif
