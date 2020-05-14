@@ -1,0 +1,1 @@
+this file is for practice of stack and queques and the file monty is interpreter of monty files.
