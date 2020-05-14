@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
 		else if (strcmp(argument[0], "pall") == 0)
 			print_stack(head);
 		else if	(strcmp(argument[0], "nop") == 0)
-			return (0);
+			continue;
 		else
 			fprintf(stderr, "L%i: unknown instruction %s\n", line_number, argument[0]);
 	}
