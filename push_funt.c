@@ -34,7 +34,7 @@ size_t print_pint(const stack_t *h, int line_number)
 
 	if (h == NULL)
 	{
-		fprintf(stderr, "L<%i>: can't pint, stack empty\n", line_number);
+		fprintf(stderr, "L%i: can't pint, stack empty\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 		printf("%d\n", h->n);
