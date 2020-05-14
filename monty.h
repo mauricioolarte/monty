@@ -38,5 +38,5 @@ size_t print_stack(const stack_t *h);
 int is_integer(char *str);
 size_t print_pint(const stack_t *h, int line_number);
 void free_stack(stack_t *head);
-stack_t *delete_dnodeint_at_index(stack_t **head, unsigned int index);
+stack_t *delete_dnodeint_at_index(stack_t **head, unsigned int index, int line_number);
 #endif

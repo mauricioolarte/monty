@@ -109,13 +109,16 @@ stack_t *get_dnodeint_at_index(stack_t *head, unsigned int index)
  *@index: is the nth node to return.
  *Return: nth node or null
  */
-stack_t *delete_dnodeint_at_index(stack_t **head, unsigned int index)
+stack_t *delete_dnodeint_at_index(stack_t **head, unsigned int index, int line_number)
 {
 	stack_t *nodeidx;
 
 	nodeidx = get_dnodeint_at_index(*head, index);
 	if (nodeidx == NULL || *head == NULL)
-		return (NULL);
+	{
+		fprintf(stderr, "L%i: can't pop an empty stack", line_number);
+		exit(EXIT_FAILURE);
+	}
 	if (*head == nodeidx)
 		*head = nodeidx->next;
 	if (nodeidx->next != NULL)
