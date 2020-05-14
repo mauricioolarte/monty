@@ -58,6 +58,15 @@ int main(int argc, char *argv[])
 			;
 		else if (strcmp(argument[0], "pop") == 0)
 			head = delete_dnodeint_at_index(&head,0, line_number);
+		else if (strcmp(argument[0], "add") == 0)
+		{
+			add_stack(&head, line_number);
+			printf("estoy aquii");
+			head = delete_dnodeint_at_index(&head,0, line_number);
+			printf("otravez");
+		}
+		else if (strcmp(argument[0], "swap") == 0)
+			swap_stack(&head, line_number);
 		else
 			fprintf(stderr, "L%i: unknown instruction %s\n", line_number, argument[0]);
 	}

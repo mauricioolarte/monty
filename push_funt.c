@@ -15,7 +15,7 @@ size_t print_stack(const stack_t *h)
 	{
 		return (0);
 	}
-	while (h != NULL)
+	while (h != NULL && number_nodes < 10)
 	{
 		printf("%d\n", h->n);
 		h = h->next;
