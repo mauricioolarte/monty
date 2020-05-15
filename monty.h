@@ -43,4 +43,7 @@ void add_stack(stack_t **head, int line_number);
 stack_t *swap_stack(stack_t **head, int line_number);
 void sub_stack(stack_t **head, int line_number);
 void div_stack(stack_t **head, int line_number);
+void mul_stack(stack_t **head, int line_number);
+void mod_stack(stack_t **head, int line_number);
+
 #endif

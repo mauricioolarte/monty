@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 			continue;
 		line_number++;
 		argument[0] = strtok(linea, delim);
-		if (argument[0] == NULL || strcmp(argument[0], "nop") == 0)
+		if (argument[0] == NULL || strcmp(argument[0], "nop")== 0)
 			continue;
 		if (strcmp(argument[0], "push") == 0)
 		{
@@ -71,6 +71,16 @@ int main(int argc, char *argv[])
 		else if (strcmp(argument[0], "div") == 0)
 		{
 			div_stack(&head, line_number);
+			head = delete_dnodeint_at_index(&head,0, line_number);
+		}
+		else if (strcmp(argument[0], "mul") == 0)
+		{
+			mul_stack(&head, line_number);
+			head = delete_dnodeint_at_index(&head,0, line_number);
+		}
+		else if (strcmp(argument[0], "mod") == 0)
+		{
+			mod_stack(&head, line_number);
 			head = delete_dnodeint_at_index(&head,0, line_number);
 		}
 		else if (strcmp(argument[0], "swap") == 0)
