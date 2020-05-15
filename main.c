@@ -63,6 +63,11 @@ int main(int argc, char *argv[])
 			add_stack(&head, line_number);
 			head = delete_dnodeint_at_index(&head,0, line_number);
 		}
+		else if (strcmp(argument[0], "sub") == 0)
+		{
+			sub_stack(&head, line_number);
+			head = delete_dnodeint_at_index(&head,0, line_number);
+		}
 		else if (strcmp(argument[0], "swap") == 0)
 			head = swap_stack(&head, line_number);
 		else
