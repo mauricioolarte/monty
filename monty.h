@@ -40,7 +40,7 @@ size_t print_pint(const stack_t *h, int line_number);
 void free_stack(stack_t *head);
 stack_t *delete_dnodeint_at_index(stack_t **head, unsigned int index, int line_number);
 void add_stack(stack_t **head, int line_number);
-void swap_stack(stack_t **head, int line_number);
+stack_t *swap_stack(stack_t **head, int line_number);
 
 
 #endif

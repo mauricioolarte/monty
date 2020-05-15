@@ -64,7 +64,7 @@ int main(int argc, char *argv[])
 			head = delete_dnodeint_at_index(&head,0, line_number);
 		}
 		else if (strcmp(argument[0], "swap") == 0)
-			swap_stack(&head, line_number);
+			head = swap_stack(&head, line_number);
 		else
 			fprintf(stderr, "L%i: unknown instruction %s\n", line_number, argument[0]);
 	}

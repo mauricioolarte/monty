@@ -3,9 +3,9 @@
 #include "monty.h"
 
 
-void swap_stack(stack_t **head, int line_number)
+stack_t *swap_stack(stack_t **head, int line_number)
 {
-	int temp;
+	stack_t *right_node;
 
 	if (head == NULL || (*head)->next == NULL)
 	{
@@ -13,8 +13,19 @@ void swap_stack(stack_t **head, int line_number)
 		exit(EXIT_FAILURE);
 	}
 
-	temp = (*head)->n;
-	(*head)->n = (*head)->next->n;
-	(*head)->next->n = temp;
+	right_node = (*head)->next;
 
+
+
+	(*head)->next = (*head)->next->next;
+	(*head)->prev = right_node;
+
+	right_node->next = (*head);
+	right_node->prev = NULL;
+
+	if ((*head)->next->next != NULL)
+		(*head)->next->next->prev = (*head);
+	(*head) = right_node;
+
+	return (*head);
 }
