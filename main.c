@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 			continue;
 		line_number++;
 		argument[0] = strtok(linea, delim);
-		if (argument[0] == NULL || strcmp(argument[0], "nop")== 0)
+		if (argument[0] == NULL || strcmp(argument[0], "nop")== 0 || is_coment(argument[0]) == 1)
 			continue;
 		if (strcmp(argument[0], "push") == 0)
 		{
