@@ -18,5 +18,5 @@ void mod_stack(stack_t **head, int line_number)
 			exit(EXIT_FAILURE);
 	}
 
-	(*head)->next->n = (*head)->next->n / (*head)->n;
+	(*head)->next->n = (*head)->next->n % (*head)->n;
 }
