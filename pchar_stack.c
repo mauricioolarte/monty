@@ -12,7 +12,7 @@ int pchar_stack(stack_t **head, int line_number)
 		fprintf(stderr, "L%i: can't pchar, stack empty", line_number);
 		exit(EXIT_FAILURE);
 	}
-	else if (character < 0 || character > 255)
+	else if (!(character > 64 && character < 90) || !(character > 96 && character < 123))
 	{
 		fprintf(stderr, "L%i: can't pchar, value out of range", line_number);
 		exit(EXIT_FAILURE);
