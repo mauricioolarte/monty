@@ -86,7 +86,10 @@ int main(int argc, char *argv[])
 		else if (strcmp(argument[0], "swap") == 0)
 			head = swap_stack(&head, line_number);
 		else
+		{
 			fprintf(stderr, "L%i: unknown instruction %s\n", line_number, argument[0]);
+			exit(EXIT_FAILURE);
+		}
 	}
 	free_stack(head);
 	fclose(file_bytecode);
