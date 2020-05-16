@@ -48,5 +48,6 @@ void mul_stack(stack_t **head, int line_number);
 void mod_stack(stack_t **head, int line_number);
 int is_coment(char *s);
 int pchar_stack(stack_t **head, int line_number);
+int pstr_stack(stack_t **head);
 
 #endif

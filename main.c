@@ -85,6 +85,10 @@ int main(int argc, char *argv[])
 		}
 		else if (strcmp(argument[0], "swap") == 0)
 			head = swap_stack(&head, line_number);
+		else if (strcmp(argument[0], "pchar") == 0)
+			pchar_stack(&head, line_number);
+		else if (strcmp(argument[0], "pstr") == 0)
+			pstr_stack(&head);
 		else
 		{
 			fprintf(stderr, "L%i: unknown instruction %s\n", line_number, argument[0]);
